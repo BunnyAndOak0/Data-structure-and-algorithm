@@ -16,7 +16,7 @@ public class Test1 {
 		System.out.println("改变之后为：");
 		System.out.println(hero);
 	}
-}
+} 
 
 class Hero{
 	String name;
