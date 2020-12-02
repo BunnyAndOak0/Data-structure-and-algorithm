@@ -6,21 +6,48 @@ package edu.kmust.LinkedList;
  */
 public class DoubleLinkedListDemo {
 	public static void main(String[] args) {
-
+		//测试
+		System.out.println("双向链表的测试");
+		//先创建节点
+		HeroNode2 hero1 = new HeroNode2(1, "宋江", "及时雨");
+		HeroNode2 hero2 = new HeroNode2(2, "卢俊义", "玉麒麟");
+		HeroNode2 hero3 = new HeroNode2(3, "吴用", "智多星");
+		HeroNode2 hero4 = new HeroNode2(4, "林冲", "豹子头");
+		
+		//创建双向链表对象
+		DoubleLinkedList doubleLinkedList = new DoubleLinkedList();
+		doubleLinkedList.add(hero1);
+		doubleLinkedList.add(hero2);
+		doubleLinkedList.add(hero3);
+		doubleLinkedList.add(hero4);
+		
+		doubleLinkedList.list();
+		
+		//修改测试
+		HeroNode2 newHero = new HeroNode2(4, "公孙胜", "入云龙");
+		doubleLinkedList.update(newHero);
+		System.out.println("修改后的链表情况");
+		doubleLinkedList.list();
+		
+		//删除
+		doubleLinkedList.del(3);
+		System.out.println("删除后的");
+		doubleLinkedList.list();
+		
 	}
 }
 
-//鍒涘缓涓�涓弻鍚戦摼琛ㄧ殑绫�
+//创建一个双向链表的类
 class DoubleLinkedList {
-	//鍒濆鍖�
+	//先初始化一个头结点，头节点不要动，不要存放具体的数值
 	private HeroNode2 head = new HeroNode2(0, "", "");
 	
-	//杩斿洖澶磋妭鐐�
+	//返回头节点
 	public HeroNode2 getHead() {
 		return head;
 	}
 	
-	//閬嶅巻鍙屽悜閾捐〃鐨勬柟娉�
+	//遍历双向链表的方法
 	public void list() {
 		//鍒ゆ柇閾捐〃鏄惁涓虹┖
 		if (head.next == null) {
@@ -128,7 +155,6 @@ class DoubleLinkedList {
 	
 }
 
-//瀹氫箟HeroNode2锛屾瘡涓狧eroNode瀵硅薄灏辨槸涓�涓妭鐐�
 class HeroNode2 {
 	public int no;
 	public String name;
