@@ -27,6 +27,7 @@ public class BubbleSort {
 			array[i] = (int)(Math.random() * 80000);    //会产生[0， 80000)之间的数
 		}
 		
+		System.out.println("冒泡排序");
 	 	Date date1 = new Date();
 	 	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		String date1Str = sdf.format(date1);

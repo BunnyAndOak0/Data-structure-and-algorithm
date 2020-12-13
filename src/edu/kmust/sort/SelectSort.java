@@ -1,8 +1,6 @@
 package edu.kmust.sort;
 
-import java.text.SimpleDateFormat;
 import java.util.Arrays;
-import java.util.Date;
 
 /**
  * @author BunnyAndOak0
@@ -11,30 +9,11 @@ import java.util.Date;
  */
 public class SelectSort {
 	public static void main(String[] args) {
-//		int[] array = {101, 34, 119, 1};
-//		
-//		System.out.println("排序前：");
-//		System.out.println(Arrays.toString(array));
-//		selectSort(array);
+		int[] array = {101, 34, 119, 1};
 		
-		//选择排序的速度测试
-		//创建80000个随机的数组
-		int[] array = new int[80000];
-		for (int i = 0; i < array.length; i++) {
-			array[i] = (int)(Math.random() * 80000);
-		}
-		
-		Date date1 = new Date();
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		String date1Str = sdf.format(date1);
-		System.out.println("排序前时间为：" + date1Str);
-		
+		System.out.println("排序前：");
+		System.out.println(Arrays.toString(array));
 		selectSort(array);
-		
-		Date date2 = new Date();
-		String date2Str = sdf.format(date2);
-		System.out.println("排序后时间为：" + date2Str);
-
 	}
 
 	//选择排序
@@ -57,8 +36,8 @@ public class SelectSort {
 				array[i] = min; 
 			}
 			
-//			System.out.println("第" + (i + 1) + "轮后：");
-//			System.out.println(Arrays.toString(array));
+			System.out.println("第" + (i + 1) + "轮后：");
+			System.out.println(Arrays.toString(array));
 		}
 
 		
